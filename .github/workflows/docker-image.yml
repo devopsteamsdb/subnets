@@ -2,9 +2,13 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - '.github/workflows/docker-image.yml'
+
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
 
